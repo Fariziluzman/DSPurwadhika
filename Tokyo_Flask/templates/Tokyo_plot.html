@@ -1,0 +1,37 @@
+{% extends 'Tokyo_layout.html' %}
+
+{% block body %}
+    <!-- <h1>Ini Page Plot</h1>
+    <i>Ini Adalah Page Plot</i> -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart" id='Tokyo_type1'>
+
+            </div>
+        </div>
+        <!-- <div class="col-md-6">
+            <div class="chart" id="dua">
+
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="chart" id="sum-type2">
+            </div>
+        </div> -->
+
+
+    </div>
+    
+
+    <script>
+        var Tokyo_type1 = {{data | safe}}
+        Plotly.plot('Tokyo_type1' , Tokyo_type1 , {})
+        // Plotly.plot('dua' , count_type1 , {})
+    </script>
+
+    <!-- <script>
+        var sum_type2 = {{data2 | safe}}
+        Plotly.plot('sum-type2' , sum_type2 , {})
+    </script> -->
+{% endblock body %}
