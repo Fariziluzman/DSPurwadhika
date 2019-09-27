@@ -1,0 +1,29 @@
+{% extends 'ujian_layout.html' %}
+
+{% block body %}
+    <h1>Data Visualization</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart" id="ujian_type1">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart" id="ujian_type2">
+
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script>
+        var ujian_type1 = {{data | safe}}
+        Plotly.plot('ujian_type1' , ujian_type1 , {})
+    </script>
+
+    <script>
+        var ujian_type2 = {{data2 | safe}}
+        Plotly.plot('ujian_type2' , ujian_type2 , {})
+    </script>
+{% endblock body %}
